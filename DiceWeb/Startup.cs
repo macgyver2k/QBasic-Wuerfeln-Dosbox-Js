@@ -30,7 +30,7 @@ namespace DiceWeb {
 
             app.UseHttpsRedirection ();
 
-            app.UseDefaultFiles (new DefaultFilesOptions () { DefaultFileNames = { "index.html" } });
+            app.UseDefaultFiles (new DefaultFilesOptions () { DefaultFileNames = { "wuerfeln.html" } });
             app.UseStaticFiles ();
 
         }

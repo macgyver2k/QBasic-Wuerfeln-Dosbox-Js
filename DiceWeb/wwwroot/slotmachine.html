@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>DiceWeb</title>
+        <style>
+            .dosbox-container {
+                width: 640px;
+                height: 400px;
+            }
+        </style>
+        <script
+            type="text/javascript"
+            src="https://js-dos.com/cdn/js-dos-api.js"
+        ></script>
+        <base href="/" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    </head>
+    <body>
+        <div id="dosbox"></div>
+        <a href="wuerfeln.html">Wuerfeln</a>
+        <script>
+            const dosboxWuerfeln = new Dosbox({
+                id: 'dosbox',
+                onload: function(dosbox) {
+                    dosbox.run('/slotmachine.zip', './runw.bat');
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -18,13 +18,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
     </head>
+
     <body>
         <div id="dosbox"></div>
+        <a href="slotmachine.html">Slotmachine</a>
         <script>
-            var dosbox = new Dosbox({
+            const dosboxWuerfeln = new Dosbox({
                 id: 'dosbox',
                 onload: function(dosbox) {
-                    dosbox.run('/qb45.zip', './QB45/QB.EXE');
+                    dosbox.run('/wuerfeln.zip', './runw.bat');
                 }
             });
         </script>
