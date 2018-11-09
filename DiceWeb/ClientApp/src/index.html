@@ -1,14 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>DiceWeb</title>
-  <base href="/">
+  <head>
+    <meta charset="utf-8" />
+    <title>DiceWeb</title>
+    <style>
+      .dosbox-container {
+        width: 640px;
+        height: 400px;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://js-dos.com/cdn/js-dos-api.js"
+    ></script>
+    <base href="/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root>Loading...</app-root>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div id="dosbox"></div>
+    <script>
+      var dosbox = new Dosbox({
+        id: 'dosbox',
+        onload: function(dosbox) {
+          dosbox.run('https://localhost:5001/qb45.zip', './QB45/QB.EXE');
+        }
+      });
+    </script>
+  </body>
 </html>
